@@ -16,9 +16,10 @@
 
 ## Dependencias
 
-### - Matplotlib
-### - NetworkX
-### - Tkinter
+### - Matplotlib = 3.5.1
+### - NetworkX = 3.2.1
+### - Tkinter = 8.6
+*Versões testadas*
 
 ### Caso não tenha as dependências acima, siga os passos de instalação.
 
