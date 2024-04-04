@@ -40,9 +40,19 @@
  main.py Código que faz a ligação entre o GUI.py e Busca.py.
  GUI.py Código que cria a interface de usuário.
  
- # Como Usar
+ # Como executar
  
  ### - Clone o repositório
- ### - Baixe as dependências se for preciso
+ ### - Baixe as dependências
  ### - Entre no diretório do código
- ### - Execute o comando python GUI.py
+ ### - Execute o arquivo GUI.py (Caso esteja no terminal use o comando ```python GUI.py```)
+Quando a janela for executada, você encontrará dois campos disponíveis:
+
+- **Palavra de Busca:** Digite aqui a sua cadeia de caracteres.
+- **Chave de Busca:** Insira a sequência que você deseja encontrar dentro da cadeia de caracteres.
+
+Após inserir os dados, clique em "Inserir". Em seguida, clique em "Próximo" para que o autômato seja gerado com o seu estado atual.
+
+A janela exibirá cada passo da execução do autômato, proporcionando controle sobre isso através do botão "Próximo".
+
+No canto superior esquerdo da janela, você verá o número de ocorrências da chave na cadeia de caracteres, juntamente com a posição atual do autômato na palavra.
