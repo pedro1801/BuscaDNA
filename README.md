@@ -36,9 +36,9 @@
 ├── main.py
 └── README.md
 ```
- Busca.py Aqui está o código referente ao algoritmo KMP.
- main.py Código que faz a ligação entre o GUI.py e Busca.py.
- GUI.py Código que cria a interface de usuário.
+ ### - Busca.py Aqui está o código referente ao algoritmo KMP.
+ ### - main.py Código que faz a ligação entre o GUI.py e Busca.py.
+ ### - GUI.py Código que cria a interface de usuário.
  
  # Como executar
  
