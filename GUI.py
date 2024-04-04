@@ -114,7 +114,6 @@ Janela.title('Janela')
 Janela.config(bg="#808080")
 
 Janela.attributes('-zoomed', True)
-Janela.resizable(False, False)
 
 button_frame = tk.Frame(Janela)
 button_frame.pack(side='bottom', fill='x')
