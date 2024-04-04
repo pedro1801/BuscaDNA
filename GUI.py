@@ -29,6 +29,13 @@ def Dimencao(Janela):
     Largura = Janela.winfo_width()
     return Largura,Altura
 
+def verificar_e_obter_dados():
+    chave = chaveBuscaLabel.get()
+    if not chave:
+        messagebox.showerror("Erro", "Por favor, insira os dados.")
+    else:
+        Inserir()
+
 def UpdateGraph():
 
     global controle,estadoAtual,qtdBusca
@@ -148,7 +155,7 @@ palavraBuscaTxt.place(x=((Largura/2)-150),y=57)
 botaoDireito = tk.Button(button_frame,text='Proximo>',command=UpdateGraph,width=10,height=3)
 botaoDireito.pack(side=tk.RIGHT,padx=30,pady=20)
 
-botaoEsquerdo = tk.Button(button_frame,text='<Inserir',command=Inserir,width=10,height=3)
+botaoEsquerdo = tk.Button(button_frame,text='<Inserir',command=verificar_e_obter_dados,width=10,height=3)
 botaoEsquerdo.pack(side=tk.LEFT,padx=30,pady=20)
 
 figureFrame = tk.Frame(Janela,width=500,height=500)
