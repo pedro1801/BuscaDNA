@@ -59,7 +59,7 @@ def UpdateGraph():
         controle+=1
         GeraGrafo(estadoAtual,estados,estadoAnterior)
     else:
-        messagebox.showinfo("Aviso", f"Processo Finalizado")
+        messagebox.showinfo("Aviso", "Processo Finalizado")
         estadoAtual = 'S0'
         controle = 0
 
@@ -86,6 +86,7 @@ def GeraGrafo(estadoAtual,estados,estadoAnterior):
     ax = figure.add_subplot()
     pos = nx.circular_layout(G)
     edge_colors = ['blue' if edge == caminho else 'black' for edge in G.edges()]
+    
     nx.draw(G,ax=ax,pos=pos,with_labels=True, node_color='skyblue',edge_color=edge_colors, node_size=1000)
     nx.draw_networkx_edge_labels(G,ax=ax,pos=pos,edge_labels=edge_labels)
 
@@ -116,40 +117,40 @@ Janela.attributes('-zoomed', True)
 Janela.resizable(False, False)
 
 button_frame = tk.Frame(Janela)
-button_frame.pack(side='right', fill='y')
-button_frame.config(bg='#797979', borderwidth=70)
+button_frame.pack(side='bottom', fill='x')
+button_frame.config(bg='#696969')
 
 Largura,Altura = Dimencao(Janela)
 
 chaveBuscaLabel = tk.Entry(button_frame)
-chaveBuscaLabel.place(x=100,y=350)
+chaveBuscaLabel.place(x=(Largura/2),y=25)
 
-chaveBuscaTxt = tk.Label(button_frame,text='Chave Busca:',background='#797979',fg='white',font=("Arial", 12, "bold"))
-chaveBuscaTxt.place(x=100,y=320)
+chaveBuscaTxt = tk.Label(button_frame,text='Chave Busca:',background='#696969',fg='white',font=("Arial", 12, "bold"))
+chaveBuscaTxt.place(x=((Largura/2)-150),y=23)
 
-qtdBuscaLabel = tk.Label(Janela,text='Sentenças encontradas:',background='#808080',fg='white',font=("Arial", 12, "bold"))
+qtdBuscaLabel = tk.Label(Janela,text='QtdBusca:',background='#808080',fg='white',font=("Arial", 12, "bold"))
 qtdBuscaLabel.place(x=10,y=10)
 
 qtdBuscaTxt = tk.Label(Janela,textvariable=valorBusca,background='#808080',fg='white',font=("Arial", 12, "bold"))
-qtdBuscaTxt.place(x=200,y=10)
+qtdBuscaTxt.place(x=110,y=10)
 
-LetraBuscaLabel = tk.Label(Janela,text='Buscando:',background='#808080',fg='white',font=("Arial", 12, "bold"))
+LetraBuscaLabel = tk.Label(Janela,text='LetraBusca:',background='#808080',fg='white',font=("Arial", 12, "bold"))
 LetraBuscaLabel.place(x=10,y=40)
 
 LetraBuscaTxt = tk.Label(Janela,textvariable=LetraBusca,background='#808080',fg='white',font=("Arial", 12, "bold"))
 LetraBuscaTxt.place(x=110,y=40)
 
 palavraBuscaLabel = tk.Entry(button_frame)
-palavraBuscaLabel.place(x=100,y=260)
+palavraBuscaLabel.place(x=(Largura/2),y=60)
 
-palavraBuscaTxt = tk.Label(button_frame,text='Palavra De Busca:',background='#797979',fg='white',font=("Arial", 12, "bold"))
-palavraBuscaTxt.place(x=100,y=230)
+palavraBuscaTxt = tk.Label(button_frame,text='Palavra De Busca:',background='#696969',fg='white',font=("Arial", 12, "bold"))
+palavraBuscaTxt.place(x=((Largura/2)-150),y=57)
 
-botaoDireito = tk.Button(button_frame,text='Proximo',command=UpdateGraph,width=10,height=3)
+botaoDireito = tk.Button(button_frame,text='Proximo>',command=UpdateGraph,width=10,height=3)
 botaoDireito.pack(side=tk.RIGHT,padx=30,pady=20)
 
-botaoEsquerdo = tk.Button(button_frame,text='Inserir Dados',command=Inserir,width=10,height=3)
-botaoEsquerdo.pack(side=tk.RIGHT,padx=30,pady=20)
+botaoEsquerdo = tk.Button(button_frame,text='<Inserir',command=Inserir,width=10,height=3)
+botaoEsquerdo.pack(side=tk.LEFT,padx=30,pady=20)
 
 figureFrame = tk.Frame(Janela,width=500,height=500)
 figureFrame.pack(expand=True)
